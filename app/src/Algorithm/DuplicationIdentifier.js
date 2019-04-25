@@ -317,7 +317,7 @@ export function handleIteration(offset, sets, windowSize, data, fieldAccThreshol
     else
     {
         let firstIndex = offset
-        let lastIndex = Math.max(offset + (windowSize - 1), data.length - 1)
+        let lastIndex = Math.min(offset + (windowSize - 1), data.length - 1)
         // log('firstIndex is ' + firstIndex + ' and lastIndex is ' + lastIndex)
         for (let idx = firstIndex; idx < lastIndex; ++idx)
         {
