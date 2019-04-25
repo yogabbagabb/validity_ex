@@ -1,3 +1,99 @@
 2019.04.25, 15:32:36.0836 UTC -> Checking duplicates for the following rows:
 2019.04.25, 15:32:36.0838 UTC -> 4,Kale,Gipp,Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
 2019.04.25, 15:32:36.0838 UTC -> 4,Kale,Gipp,The Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
+2019.04.25, 15:45:04.0242 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:04.0243 UTC -> 4,Kale,Gipp,Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
+2019.04.25, 15:45:04.0243 UTC -> 4,Kale,Gipp,The Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
+2019.04.25, 15:45:21.0345 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0346 UTC -> 4,Kale,Gipp,Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
+2019.04.25, 15:45:21.0358 UTC -> Checking for a duplicate between indices: 1 and 23
+2019.04.25, 15:45:21.0362 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0362 UTC -> 57,Jeddy,Woodhead,Wiegand, Casper and Kreiger,jwoodhead1k@shop-pro.jp,7942 Golf View Drive,,88006,Las Cruces,New Mexico,NM,505-560-1018,JTWTHT
+2019.04.25, 15:45:21.0362 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0367 UTC -> Checking for a duplicate between indices: 2 and 23
+2019.04.25, 15:45:21.0376 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0376 UTC -> 30,Gavin,Trimming,Carroll, Sauer and Bauch,gtrimmingt@google.co.jp,2128 Northview Alley,,1813,Woburn,Massachusetts,MA,339-787-2566,KFNTRMNK
+2019.04.25, 15:45:21.0376 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0381 UTC -> Checking for a duplicate between indices: 3 and 23
+2019.04.25, 15:45:21.0385 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0386 UTC -> 67,Galvin,Chevin,Friesen, Stroman and Rempel,gchevin1u@mozilla.com,21950 Heffernan Street,,80228,Denver,Colorado,CO,720-116-6308,KLFNXFN
+2019.04.25, 15:45:21.0386 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0390 UTC -> Checking for a duplicate between indices: 4 and 23
+2019.04.25, 15:45:21.0395 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0395 UTC -> 4,Kale,Gipp,The Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551,KLJP
+2019.04.25, 15:45:21.0395 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0399 UTC -> Checking for a duplicate between indices: 5 and 23
+2019.04.25, 15:45:21.0403 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0403 UTC -> 4,Kale,Gipp,Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551,KLJP
+2019.04.25, 15:45:21.0403 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0407 UTC -> Checking for a duplicate between indices: 6 and 23
+2019.04.25, 15:45:21.0411 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0411 UTC -> 89,Kial,Cressor,Friesen, Boyle and Kunde,kcressor2g@cbsnews.com,94079 Becker Junction,,88558,El Paso,Texas,TX,915-357-2266,KLKRSR
+2019.04.25, 15:45:21.0411 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0416 UTC -> Checking for a duplicate between indices: 7 and 23
+2019.04.25, 15:45:21.0421 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0421 UTC -> 17,Cullen,Cumberland,Cormier Inc,ccumberlandg@blogger.com,9071 Pankratz Park,,43635,Toledo,Ohio,OH,419-235-7824,KLNKMRLNT
+2019.04.25, 15:45:21.0421 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0426 UTC -> Checking for a duplicate between indices: 8 and 23
+2019.04.25, 15:45:21.0433 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0433 UTC -> 69,Claretta,Atheis,Kunze Group,catheis1w@tripod.com,75 Brickson Park Alley,Apt 7,92196,San Diego,California,CA,619-489-6966,KLRT0S
+2019.04.25, 15:45:21.0433 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0438 UTC -> Checking for a duplicate between indices: 9 and 23
+2019.04.25, 15:45:21.0444 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0445 UTC -> 91,Kameko,Mearing,Ferry, Heathcote and Fritsch,kmearing2i@youtu.be,078 Park Meadow Trail,Apt 4,84605,Provo,Utah,UT,801-542-7238,KMKMRNK
+2019.04.25, 15:45:21.0445 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0449 UTC -> Checking for a duplicate between indices: 10 and 23
+2019.04.25, 15:45:21.0454 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0454 UTC -> 38,Gunther,Bonas,D'Amore, Fadel and Welch,gbonas11@tripod.com,1487 American Parkway,Apt 1,92519,Riverside,California,CA,951-933-6645,KN0RBNS
+2019.04.25, 15:45:21.0454 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0460 UTC -> Checking for a duplicate between indices: 11 and 23
+2019.04.25, 15:45:21.0466 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0466 UTC -> 38,Gunther,Bonas,D'Amore, Fadel and Welch,gbonas11@tripod.com,1487 American Parkway,Apt 1,92519,Riverside,California,CA,951-933-6645,KN0RBNS
+2019.04.25, 15:45:21.0466 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0473 UTC -> Checking for a duplicate between indices: 12 and 23
+2019.04.25, 15:45:21.0478 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0479 UTC -> 14,Guinna,Labden,Parisian-Luettgen,glabdend@examiner.com,01 Mayer Trail,,79171,Amarillo,Texas,TX,806-851-1176,KNLBTN
+2019.04.25, 15:45:21.0479 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0483 UTC -> Checking for a duplicate between indices: 13 and 23
+2019.04.25, 15:45:21.0489 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0489 UTC -> 13,Gwynne,Eddington,Christiansen, Gutmann and Ritchie,geddingtonc@webnode.com,0 Artisan Place,Apt 7,80126,Littleton,Colorado,CO,303-949-6227,KNTNKTN
+2019.04.25, 15:45:21.0489 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0496 UTC -> Checking for a duplicate between indices: 14 and 23
+2019.04.25, 15:45:21.0502 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0502 UTC -> 80,Karolina,Ornells,Rohan, Berge and Smitham,kornells27@google.ru,3 Florence Plaza,Apt 13,84130,Salt Lake City,Utah,UT,801-797-5954,KRLNRNLS
+2019.04.25, 15:45:21.0502 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0506 UTC -> Checking for a duplicate between indices: 15 and 23
+2019.04.25, 15:45:21.0512 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0512 UTC -> 73,Goran,June,D'Amore, Weimann and Hermiston,gjune20@hhs.gov,77255 Garrison Street,,22096,Reston,Virginia,VA,571-360-9141,KRNJN
+2019.04.25, 15:45:21.0512 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0518 UTC -> Checking for a duplicate between indices: 16 and 23
+2019.04.25, 15:45:21.0354 UTC -> Entering handleIteration
+2019.04.25, 15:45:21.0527 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0528 UTC -> 84,Corie,Santora,Lubowitz-Dibbert,csantora2b@howstuffworks.com,91 Main Parkway,,80249,Denver,Colorado,CO,303-223-5985,KRSNTR
+2019.04.25, 15:45:21.0528 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0537 UTC -> Checking for a duplicate between indices: 17 and 23
+2019.04.25, 15:45:21.0541 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0541 UTC -> 37,Katalin,Samet,Predovic, Pouros and Feest,ksamet10@mtv.com,49 Northview Trail,,36641,Mobile,Alabama,AL,251-760-7361,KTLNSMT
+2019.04.25, 15:45:21.0541 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0547 UTC -> Checking for a duplicate between indices: 18 and 23
+2019.04.25, 15:45:21.0551 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0551 UTC -> 74,Laverne,Baszkiewicz,Wehner, Raynor and Swaniawski,lbaszkiewicz21@ocn.ne.jp,1 Sage Circle,,15205,Pittsburgh,Pennsylvania,PA,724-883-7831,LFRNBSSKWKS
+2019.04.25, 15:45:21.0551 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0556 UTC -> Checking for a duplicate between indices: 19 and 23
+2019.04.25, 15:45:21.0560 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0560 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0346 UTC -> 4,Kale,Gipp,The Klein Group,kgipp3@360.cn,4985 Menomonie Drive,,94975,Petaluma,California,CA,707-840-2551
+2019.04.25, 15:45:21.0569 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0569 UTC -> 54,Leonard,Colclough,Hartmann and Sohns,lcolclough1h@arizona.edu,73 Melby Center,,45490,Dayton,Ohio,OH,937-521-2116,LNRTKLKLF
+2019.04.25, 15:45:21.0569 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0574 UTC -> Checking for a duplicate between indices: 21 and 23
+2019.04.25, 15:45:21.0579 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0579 UTC -> 70,Lorrayne,Broadley,Spinka-Hudson,lbroadley1x@dell.com,055 John Wall Terrace,,48956,Lansing,Michigan,MI,517-634-5583,LRNBRTL
+2019.04.25, 15:45:21.0579 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0583 UTC -> Checking for a duplicate between indices: 22 and 23
+2019.04.25, 15:45:21.0587 UTC -> Checking duplicates for the following rows:
+2019.04.25, 15:45:21.0588 UTC -> 34,Lewes,Balaison,Kling-Gusikowski,lbalaisonx@simplemachines.org,011 Stuart Parkway,,80204,Denver,Colorado,CO,303-700-7479,LWSBLSN
+2019.04.25, 15:45:21.0588 UTC -> 6,Lewes,Stainland,Gulgowski-Kutch,lstainland5@devhub.com,99470 Caliangt Trail,Apt 12,28410,Wilmington,North Carolina,NC,910-151-9797,LWSTNLNT
+2019.04.25, 15:45:21.0564 UTC -> Checking for a duplicate between indices: 20 and 23
+2019.04.25, 15:45:21.0354 UTC -> firstIndex is 1 and lastIndex is 23
+2019.04.25, 15:45:21.0560 UTC -> 54,Leonard,Colclough,Hartmann and Sons,lcolclough1h@arizona.edu,73 Melby Center,,45490,Dayton,Ohio,OH,937-521-2116,LNRTKLKLF
