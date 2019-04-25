@@ -1,3 +1,25 @@
+# Aahan's Documentation
+
+## Installation
+Please fork this repository, run npm install (I assume that your version is at least version 9) and then run `npm start`. The latter will open up your web browswer to local host, where you will see the app!
+
+There are some tests in the `__tests__` directory -- these are not rigorous unit tests (if I had more time, I would have made them rigorous) but tests that allowed to (a) incrementally build this app and (b) make some visual assertions about the correctness of the app's logic. The heart of this app is really the algorithm (everything else is just a matter of display) -- its logic is, briefly, as follows:
+
+- Order all records by the metaphone of (firstName + lastName)
+- Define a window size `w`
+- Determine which of the first `w` elements match each other, where
+    - Two elements match each other if a certain proportion of their fields match, where:
+        - Two fields match if the levenshtein distance between their metaphones is above
+        a parametrized threshold
+- Move the window one element down, so that we work with another window of `w` elements; the
+first `w-1` elements correspond to the last `w-1` elements in the former window; there is only
+one new element, which is the last item in the new window. Compare this element to all
+other elements, to check for duplicates.
+- Keep repeating the last step, until we've checked all elements. This should dramatically improve over the naiive `O(n^2)` algorithm, that checks for similarity everywhere.
+
+#
+
+--
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
