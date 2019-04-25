@@ -19,20 +19,39 @@ export class ListComponent extends React.Component {
             this.props.fieldAccThreshold, this.props.overallAccThreshold, this.props.rowsToCompare)
 
         let duplicates = duplicateInformation.filter((element) => {return element.length > 1})
+        duplicates = duplicates.flat()
         let nonDuplicates = duplicateInformation.filter((element) => {return element.length == 1})
 
         this.setState({
+            data,
             duplicates,
             nonDuplicates
         })
 
     }
 
+    displayDataAtIndex(dataIndex)
+    {
+        let rowData = this.state.data[dataIndex]
+        let outputString = ""
+        let lastColumn = 12
+        for (let idx = 0; idx < lastColumn; ++idx)
+        {
+            outputString += (rowData[idx] + ", ")
+        }
+        return outputString
+    }
+
     getRenderFunction(stateField)
     {
         return function renderItem(index, key)
         {
-            return <div key={key}>{this.state[stateField][index]}</div>;
+            return <div key={key}
+                    style={{lineHeight: `30px`}} >
+                {
+                    this.displayDataAtIndex(this.state[stateField][index])
+                }
+                </div>;
         }
     }
 
