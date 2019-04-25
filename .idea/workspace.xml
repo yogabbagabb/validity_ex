@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="afb2e990-030b-4d39-ab0f-f9ee2e59a5d7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,12 +24,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="js" value="459" />
+          <entry key="js" value="3899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JavaScript" value="459" />
+          <entry key="JavaScript" value="3899" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -45,11 +46,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="157" column="4" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+            <state relative-caret-position="362">
+              <caret line="242" column="36" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
               </folding>
@@ -57,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+            <state relative-caret-position="593">
+              <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
               <folding>
                 <element signature="e#0#211#0" expanded="true" />
               </folding>
@@ -84,8 +85,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js" />
         <option value="$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js" />
+        <option value="$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js" />
       </list>
     </option>
   </component>
@@ -1670,9 +1671,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="720" />
+    <option name="x" value="664" />
     <option name="y" value="23" />
-    <option name="width" value="720" />
+    <option name="width" value="776" />
     <option name="height" value="822" />
   </component>
   <component name="ProjectView">
@@ -1748,19 +1749,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556198949410</updated>
-      <workItem from="1556198950896" duration="1819000" />
+      <workItem from="1556198950896" duration="3408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1819000" />
+    <option name="totallyTimeSpent" value="3408000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="720" y="23" width="720" height="822" extended-state="0" />
+    <frame x="664" y="23" width="776" height="822" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.45064378" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.009271523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
@@ -1803,22 +1804,22 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js">
+    <entry file="file://$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+        <state relative-caret-position="362">
+          <caret line="242" column="36" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
           <folding>
-            <element signature="e#0#211#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Algorithm/DuplicationIdentifier.js">
+    <entry file="file://$PROJECT_DIR$/app/src/Algorithm/__tests__/DuplicationIdentifierTests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="157" column="4" selection-start-line="157" selection-start-column="4" selection-end-line="157" selection-end-column="4" />
+        <state relative-caret-position="593">
+          <caret line="49" column="6" selection-start-line="49" selection-start-column="6" selection-end-line="49" selection-end-column="6" />
           <folding>
-            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#0#211#0" expanded="true" />
           </folding>
         </state>
       </provider>

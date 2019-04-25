@@ -9,21 +9,11 @@ import metaphone from "metaphone"
 /*
 Read the data from either normal.csv or advanced.csv. We could parameterize
 the choice of csv file -- in the interest of time, we don't do so now but hard
-code normal.csv.
+code normal.csv. Return the labels for the data (ie the column names) and the
+data itself
  */
 export function readData()
 {
-    // console.log(csvName)
-    // let csvFile = new File (['hi']  , csvName);
-    // console.log(csvFile)
-    // console.log(csvFile.name)
-    // console.log(window.location.pathname)
-    // console.log(csvFile.size)
-    // console.log(csvFile.type)
-    // await Papa.parse(csvFile, { complete: async function (results){
-    //     console.log(results.data)
-    // }
-    // })
     let data = [
         ["id", "first_name", "last_name", "company", "email", "address1", "address2", "zip", "city", "state_long", "state", "phone"],
         ["1", "Donalt", "Canter", "Gottlieb Group", "dcanter0@nydailynews.com", "9 Homewood Alley", "", "50335", "Des Moines", "Iowa", "IA", "515-601-4495"],
@@ -138,13 +128,14 @@ export function readData()
 }
 
 
-/*
-Sort the data using the lexiographic order on the
-monophone algorithm applied to the concatenation
-of first and last name
-
+/**
+ * Determine if one array should precede another after applying
+ * the lexiographic order (aka the dictionary order) to the
+ * metaphone of each array
+ * @param arrayA: An array of contact information.
+ * @param arrayB: An array of contact information.
+ * @returns {number}
  */
-
 function lexiographicOrder(arrayA, arrayB)
 {
     let metaphoneIndex = 12
@@ -161,17 +152,115 @@ function lexiographicOrder(arrayA, arrayB)
 }
 
 
+/*
+Sort the data using the lexiographic order on the
+monophone algorithm applied to the concatenation
+of first and last name
+
+ */
 export function sortData() {
     let dataArray = readData()
     let data = dataArray[1]
+    // Get the
     let dataLabels = dataArray[0]
 
     let firstNameIndex = 1
     let lastNameIndex = 2
+    // For each array containing contact information, add the metaphone of firstName + lastName to the array
     let processedArray = data.map(arr => {arr.push(metaphone(arr[firstNameIndex] + arr[lastNameIndex])); return arr;})
     processedArray.sort(lexiographicOrder)
     return [dataLabels, processedArray]
 }
 
 
+/**
+ * First concatenate the entries corresponding to the indices in rowsToCompare.
+ * Do this for both rowOne and rowTwo. Then return the metaphone of the resultant
+ * rows.
+ * @param rowOne: An array of contact information
+ * @param rowTwo: An array of contact information
+ * @param rowsToCompare: An array of indices corresponding to fields that we wish
+ * to concatenate
+ * @returns {*} False (in the event that one index corresponded to a blank field
+ * ) or an array of metaphones.
+ */
+export function computeMetaphoneFromRows(rowOne, rowTwo, rowsToCompare)
+{
+    let rowOneOutput = ""
+    let rowTwoOutput = ""
+    let blankString = ""
+    let phoneIndex = 11;
 
+    for (let idx = 0; idx < rowsToCompare.length; ++idx)
+    {
+        let rowIndex = rowsToCompare[idx]
+        // Metaphone returns a blank string on numerical data like a phone string
+        // In the event that we're considering numerical data, just return
+        // data itself rather than process it.
+        if (rowIndex == phoneIndex)
+        {
+            return [rowOne[phoneIndex], rowTwo[phoneIndex]]
+        }
+        if (rowOne[rowIndex]==(blankString) || rowTwo[rowIndex]==(blankString))
+        {
+            return false;
+        }
+        rowOneOutput += rowOne[rowIndex]
+        rowTwoOutput += rowTwo[rowIndex]
+    }
+
+    return [metaphone(rowOneOutput), metaphone(rowTwoOutput)]
+
+}
+
+/**
+ * Return a score assessing the similarity between the firstMetaphone and
+ * the secondMetaphone. If the score is 1, the match is exact; if the score
+ * is 0, the match fails abysmally.
+ * @param firstMetaphone: Some String (it doesn't have to be a metaphone) but we will use metaphones in this app.
+ * @param secMetaphone: Same as above.
+ * @returns {number} A float in [0,1]
+ */
+export function computeSimilarityScore(firstMetaphone, secMetaphone)
+{
+    let l = new Levenshtein(firstMetaphone, secMetaphone)
+    let distance = l.distance
+    return 1 - (distance * 1.0)/(Math.max(firstMetaphone.length, secMetaphone.length))
+
+}
+
+
+/**
+ * Return a score assessing how many fields between two rows are similar enough. For example,
+ * if rowOne and rowTwo are compared on 4 fields and both rows match on exactly two of those
+ * fields, then the overall acceptance score is 2/4 = 0.5
+ * @param rowOne Some row of contact information.
+ * @param rowTwo Some row of contact information.
+ * @param acceptanceThreshold: The score that a field must reach between both arrays
+ * to be considered similar
+ * @param rowsToCompare: An array of n arrays from x_1 to x_n. Each x_i is an array
+ * containing indices that correspond to fields whose similarity will be assessed.
+ * @returns {number} A float in [0,1]
+ */
+export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToCompare)
+{
+    let totalRows = rowsToCompare.length
+    let numberOfAcceptedMatches = 0
+    for (let idx = 0; idx < totalRows; ++idx)
+    {
+        let metaphoneArray = computeMetaphoneFromRows(rowOne, rowTwo, rowsToCompare[idx])
+        if (metaphoneArray === false)
+        {
+            continue;
+        }
+        if (computeSimilarityScore(metaphoneArray[0], metaphoneArray[1]) >= acceptanceThreshold)
+        {
+            numberOfAcceptedMatches += 1
+        }
+
+    }
+
+    let halfMark = 0.5
+    return numberOfAcceptedMatches * 1.0/totalRows
+
+}
