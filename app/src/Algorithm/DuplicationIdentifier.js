@@ -309,7 +309,24 @@ export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCom
  */
 export function handleIteration(offset, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
+    log("Entering handleIteration")
+    if (offset == 0)
+    {
+        handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+    }
+    else
+    {
+        let firstIndex = offset
+        let lastIndex = Math.max(offset + (windowSize - 1), data.length - 1)
+        log('firstIndex is ' + firstIndex + ' and lastIndex is ' + lastIndex)
+        for (let idx = firstIndex; idx < lastIndex; ++idx)
+        {
+            console.log("Handling a regular iteration")
+            log('Checking for a duplicate between indices: ' + idx + " and " + lastIndex)
+            markIfDuplicates(data, idx, lastIndex, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets);
 
+        }
+    }
 
 }
 
@@ -331,6 +348,13 @@ export function handleIteration(offset, sets, windowSize, data, fieldAccThreshol
 export function handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
 
+    for (let slowIndex = 0; slowIndex < windowSize; ++slowIndex)
+    {
+        for (let fastIndex = slowIndex + 1; fastIndex < windowSize; ++fastIndex)
+        {
+            markIfDuplicates(data, slowIndex, fastIndex, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets)
+        }
+    }
 
 }
 

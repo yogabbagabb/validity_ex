@@ -65,4 +65,23 @@ describe('Duplication Identifier Methods', () => {
         console.log(sets)
 
     })
+    test("Test handle iteration", () => {
+        let dataArray = sortData()
+        let data = dataArray[1]
+        // let refinedData = data.slice(0,11)
+        let refinedData = data.slice(46, 70)
+        let sets = new StaticDisjointSet(refinedData.length)
+        console.log(refinedData)
+
+        let fieldAccThreshold = 0.6
+        let overallAccThreshold = 0.5
+        // let rowsToCompare = [[1,2], [4], [5,6,7,8,9,10],[11]]
+        let rowsToCompare = [[1,2], [4], [11]]
+        let offset=1
+        let windowSize = 2
+        handleIteration(offset, sets, windowSize, refinedData, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+        console.log(sets.compile())
+
+
+    })
 })
