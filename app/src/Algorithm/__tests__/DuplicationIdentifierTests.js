@@ -85,4 +85,39 @@ describe('Duplication Identifier Methods', () => {
 
 
     })
+    test("Identify distinct elements easy", () => {
+        let dataArray = sortData()
+        let data = dataArray[1]
+        // let refinedData = data.slice(0,11)
+        let refinedData = data.slice(0,11)
+        console.log(refinedData)
+
+        let windowSize = 2
+        let fieldAccThreshold = 0.6
+        let overallAccThreshold = 0.5
+        // let rowsToCompare = [[1,2], [4], [5,6,7,8,9,10],[11]]
+        let rowsToCompare = [[1,2], [4], [11]]
+        let distinctElements = identifyDistinctElements(refinedData, windowSize, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+        console.log(distinctElements)
+
+
+    })
+
+    test("Identify distinct elements hard", () => {
+        let dataArray = sortData()
+        let data = dataArray[1]
+        let refinedData = data
+        // console.log(refinedData)
+
+        let windowSize = 50
+        let fieldAccThreshold = 0.6
+        let overallAccThreshold = 0.25
+        // let rowsToCompare = [[1,2], [4], [5,6,7,8,9,10],[11]]
+        let rowsToCompare = [[1,2], [11]]
+        let distinctElements = identifyDistinctElements(refinedData, windowSize, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+        console.log(distinctElements)
+
+
+    })
+
 })

@@ -374,6 +374,14 @@ export function handleFirstIteration(sets, windowSize, data, fieldAccThreshold, 
  */
 export function identifyDistinctElements(data, windowSize, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
+    let sets = new StaticDisjointSet(data.length)
+    let dataLength = data.length
+    for (let idx = 0; idx <= (dataLength - windowSize); ++idx)
+    {
+        handleIteration(idx, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+    }
+
+    return sets.compile()
 
 
 }
