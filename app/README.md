@@ -1,7 +1,7 @@
 # Aahan's Documentation
 
 ## Installation
-Please fork this repository, run npm install (I assume that your version is at least version 9) and then run `npm start`. The latter will open up your web browswer to local host, where you will see the app!
+Please fork this repository, checkout the `submission` branch, run `npm install` (I assume that your version of npm is at least version 10) and then run `npm start`. The latter will open up your web browswer to local host, where you will see the app!
 
 There are some tests in the `__tests__` directory -- these are not rigorous unit tests (if I had more time, I would have made them rigorous) but tests that allowed me to (a) incrementally build this app and (b) make some visual assertions about the correctness of the app's logic. The heart of this app is really the algorithm (everything else is just a matter of display) -- its logic is, briefly, as follows:
 
