@@ -2,6 +2,7 @@ import Levenshtein from "levenshtein"
 import Papa from "papaparse"
 import StaticDisjointSet from "mnemonist/static-disjoint-set"
 import metaphone from "metaphone"
+const log = require("log-to-file")
 
 
 
@@ -281,6 +282,16 @@ export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToComp
  * @param sets A disjoints set object. Whichever objects are in the same set are considered duplicates.
  */
 export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets) {
+    console.log("Handling a regular iteration")
+    let rowOne = data[idx]
+    let rowTwo = data[secIdx]
+    log("Checking duplicates for the following rows:")
+    log(rowOne)
+    log(rowTwo)
+    let similarityScore = detectSimilarity(rowOne, rowTwo, fieldAccThreshold, rowsToCompare)
+    if (similarityScore >= overallAccThreshold) {
+        sets.union(idx, secIdx)
+    }
 }
 
 /**

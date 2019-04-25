@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "levenshtein": "^1.0.5",
+    "log-to-file": "^2.0.1",
     "metaphone": "^1.0.4",
     "mnemonist": "^0.27.2",
     "papaparse": "^4.6.3",
