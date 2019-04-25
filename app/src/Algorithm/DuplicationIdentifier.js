@@ -264,3 +264,82 @@ export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToComp
     return numberOfAcceptedMatches * 1.0/totalRows
 
 }
+
+/**
+ * If the contact data corresponding to idx and secIdx in data is similar enough -- ie
+ * its similarity score calculated on the indices in rowsToCompare exceeds the fieldAccThreshold -- then
+ * take the union of the indices in sets, a disjoint set.
+ * @param data: An array of arrays x_1 to x_n, each x_i containing contact information
+ * @param idx: int.
+ * @param secIdx An index corresponding to a contact in data that will be compared against
+ * the contact corresponding to idx
+ * @param fieldAccThreshold: An float; if fields have a similarity score greater than
+ * this threshhold, they will be marked as similar.
+ * @param rowsToCompare: An array of n arrays from x_1 to x_n. Each x_i is an array
+ * containing indices that correspond to fields whose similarity will be assessed.
+ * @param overallAccThreshold: A float; if two rows have a proportion of similar fields (
+ * ie similar fields/ all fields), then the rows will be considered similar.
+ * @param sets A disjoints set object. Whichever objects are in the same set are considered duplicates.
+ */
+export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets) {
+}
+
+/**
+ * In the sliding window model (see https://en.wikiversity.org/wiki/Duplicate_record_detection#Sorted_Neighborhood_Approach)
+ * , handle an iteration
+ * @param offset: The current first index in the window.
+ * @param windowSize: The distance between the current first index and the last index.
+ *
+ * Everything else is the same as above.
+ * @param sets
+ * @param data
+ * @param fieldAccThreshold
+ * @param overallAccThreshold
+ * @param rowsToCompare
+ */
+export function handleIteration(offset, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+{
+
+
+}
+
+/**
+ * In the sliding window model (see https://en.wikiversity.org/wiki/Duplicate_record_detection#Sorted_Neighborhood_Approach)
+ * , handle the very first iteration, which requires that we check for similarity between all
+ * of the first windowSize entries; this forces us to make this many comparisons:
+ * windowSize * (windowSize-1) entries
+ *
+ * Everything else is the same as above.
+ * @param offset:
+ * @param windowSize:
+ * @param sets
+ * @param data
+ * @param fieldAccThreshold
+ * @param overallAccThreshold
+ * @param rowsToCompare
+ */
+export function handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+{
+
+
+}
+
+
+/**
+ * The function that an application will call to determine which rows of data
+ * correspond to duplicates and which rows of data do not correspond to duplicates.
+ * @param data: An array of contact information; each piece of contact information is itself
+ * an array.
+ * @param windowSize: The window to search over see (https://en.wikiversity.org/wiki/Duplicate_record_detection#Sorted_Neighborhood_Approach).
+ * @param fieldAccThreshold: A minimum threshold that tells establishes "how similar
+ * two fields in two array of contact information must be" in order for them to be considered the same.
+ * @param overallAccThreshold: The proportion of fields that must match between two pieces of
+ * contact information, in order for the two pieces to be considered the same.
+ * @param rowsToCompare: An array of n arrays from x_1 to x_n. Each x_i is an array
+ * containing indices that correspond to fields whose similarity will be assessed.
+ */
+export function identifyDistinctElements(data, windowSize, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+{
+
+
+}
