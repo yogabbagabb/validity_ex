@@ -197,11 +197,11 @@ export function computeMetaphoneFromRows(rowOne, rowTwo, rowsToCompare)
         // Metaphone returns a blank string on numerical data like a phone string
         // In the event that we're considering numerical data, just return
         // data itself rather than process it.
-        if (rowIndex == phoneIndex)
+        if (rowIndex === phoneIndex)
         {
             return [rowOne[phoneIndex], rowTwo[phoneIndex]]
         }
-        if (rowOne[rowIndex]==(blankString) || rowTwo[rowIndex]==(blankString))
+        if (rowOne[rowIndex] === (blankString) || rowTwo[rowIndex] === (blankString))
         {
             return false;
         }
@@ -260,8 +260,7 @@ export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToComp
 
     }
 
-    let halfMark = 0.5
-    return numberOfAcceptedMatches * 1.0/totalRows
+    return (numberOfAcceptedMatches * 1.0)/totalRows
 
 }
 
