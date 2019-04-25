@@ -141,11 +141,11 @@ function lexiographicOrder(arrayA, arrayB)
     let metaphoneIndex = 12
     if (arrayA[metaphoneIndex] < arrayB[metaphoneIndex])
     {
-        return 1
+        return -1
     }
     else if (arrayA[metaphoneIndex] > arrayB[metaphoneIndex])
     {
-        return -1
+        return 1
     }
     return 0
 
