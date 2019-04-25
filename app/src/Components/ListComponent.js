@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactList from 'react-list';
+import {identifyDistinctElements, sortData} from "../Algorithm/DuplicationIdentifier";
 
-class MyComponent extends React.Component {
-    state = {
-        accounts: []
-    };
+export class ListComponent extends React.Component {
 
-    componentWillMount() {
-        loadAccounts(::this.handleAccounts);
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            accounts: []
+        };
     }
 
-    handleAccounts(accounts) {
-        this.setState({accounts});
+    componentWillMount() {
+        let dataArray = sortData()
+        let data = dataArray[1]
+        let duplicateInformation = identifyDistinctElements(data, this.props.windowSize,
+            this.props.fieldAccThreshold, this.props.overallAccThreshold, this.props.rowsToCompare)
+
+        let duplicates = duplicateInformation.filter((element) => {return element.length > 1})
+        let nonDuplicates = duplicateInformation.filter((element) => {return element.length == 1})
+
+        this.setState({
+            duplicates,
+            nonDuplicates
+        })
+
     }
 
     renderItem(index, key) {
