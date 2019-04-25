@@ -144,8 +144,33 @@ monophone algorithm applied to the concatenation
 of first and last name
 
  */
-export function sortData()
+
+function lexiographicOrder(arrayA, arrayB)
 {
+    let metaphoneIndex = 12
+    if (arrayA[metaphoneIndex] < arrayB[metaphoneIndex])
+    {
+        return 1
+    }
+    else if (arrayA[metaphoneIndex] > arrayB[metaphoneIndex])
+    {
+        return -1
+    }
+    return 0
+
+}
+
+
+export function sortData() {
+    let dataArray = readData()
+    let data = dataArray[1]
+    let dataLabels = dataArray[0]
+
+    let firstNameIndex = 1
+    let lastNameIndex = 2
+    let processedArray = data.map(arr => {arr.push(metaphone(arr[firstNameIndex] + arr[lastNameIndex])); return arr;})
+    processedArray.sort(lexiographicOrder)
+    return [dataLabels, processedArray]
 }
 
 
