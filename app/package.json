@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "levenshtein": "^1.0.5",
+    "metaphone": "^1.0.4",
+    "mnemonist": "^0.27.2",
+    "papaparse": "^4.6.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
