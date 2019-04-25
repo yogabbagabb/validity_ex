@@ -28,18 +28,36 @@ export class ListComponent extends React.Component {
 
     }
 
-    renderItem(index, key) {
-        return <div key={key}>{this.state.accounts[index].name}</div>;
+    getRenderFunction(stateField)
+    {
+        return function renderItem(index, key)
+        {
+            return <div key={key}>{this.state[stateField][index]}</div>;
+        }
     }
 
     render() {
+        let dupRenderFunction = this.getRenderFunction("duplicates")
+        dupRenderFunction = dupRenderFunction.bind(this)
+
+        let nonDupRenderFunction = this.getRenderFunction("nonDuplicates")
+        nonDupRenderFunction = nonDupRenderFunction.bind(this)
+
         return (
             <div>
-                <h1>Accounts</h1>
+                <h1>Duplicates</h1>
                 <div style={{overflow: 'auto', maxHeight: 400}}>
                     <ReactList
-                        itemRenderer={::this.renderItem}
-                        length={this.state.accounts.length}
+                        itemRenderer={dupRenderFunction}
+                        length={this.state.duplicates.length}
+                        type='uniform'
+                    />
+                </div>
+                <h1>Non-Duplicates</h1>
+                <div style={{overflow: 'auto', maxHeight: 400}}>
+                    <ReactList
+                        itemRenderer={nonDupRenderFunction}
+                        length={this.state.nonDuplicates.length}
                         type='uniform'
                     />
                 </div>
