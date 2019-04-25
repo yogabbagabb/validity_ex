@@ -282,12 +282,12 @@ export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToComp
  * @param sets A disjoints set object. Whichever objects are in the same set are considered duplicates.
  */
 export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets) {
-    console.log("Handling a regular iteration")
+    // console.log("Handling a regular iteration")
     let rowOne = data[idx]
     let rowTwo = data[secIdx]
-    log("Checking duplicates for the following rows:")
-    log(rowOne)
-    log(rowTwo)
+    // log("Checking duplicates for the following rows:")
+    // log(rowOne)
+    // log(rowTwo)
     let similarityScore = detectSimilarity(rowOne, rowTwo, fieldAccThreshold, rowsToCompare)
     if (similarityScore >= overallAccThreshold) {
         sets.union(idx, secIdx)
@@ -309,7 +309,7 @@ export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCom
  */
 export function handleIteration(offset, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
-    log("Entering handleIteration")
+    // log("Entering handleIteration")
     if (offset == 0)
     {
         handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
@@ -318,11 +318,11 @@ export function handleIteration(offset, sets, windowSize, data, fieldAccThreshol
     {
         let firstIndex = offset
         let lastIndex = Math.max(offset + (windowSize - 1), data.length - 1)
-        log('firstIndex is ' + firstIndex + ' and lastIndex is ' + lastIndex)
+        // log('firstIndex is ' + firstIndex + ' and lastIndex is ' + lastIndex)
         for (let idx = firstIndex; idx < lastIndex; ++idx)
         {
-            console.log("Handling a regular iteration")
-            log('Checking for a duplicate between indices: ' + idx + " and " + lastIndex)
+            // console.log("Handling a regular iteration")
+            // log('Checking for a duplicate between indices: ' + idx + " and " + lastIndex)
             markIfDuplicates(data, idx, lastIndex, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets);
 
         }

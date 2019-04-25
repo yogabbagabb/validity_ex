@@ -5,7 +5,8 @@ import {
     computeMetaphoneFromRows,
     detectSimilarity,
     markIfDuplicates,
-    handleIteration
+    handleIteration,
+    identifyDistinctElements
 } from "../DuplicationIdentifier";
 import StaticDisjointSet from "mnemonist/static-disjoint-set"
 
