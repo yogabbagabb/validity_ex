@@ -2,6 +2,7 @@ import Levenshtein from "levenshtein"
 import Papa from "papaparse"
 import StaticDisjointSet from "mnemonist/static-disjoint-set"
 import metaphone from "metaphone"
+const log = require("log-to-file")
 
 
 
@@ -281,6 +282,16 @@ export function detectSimilarity(rowOne, rowTwo, acceptanceThreshold, rowsToComp
  * @param sets A disjoints set object. Whichever objects are in the same set are considered duplicates.
  */
 export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets) {
+    // console.log("Handling a regular iteration")
+    let rowOne = data[idx]
+    let rowTwo = data[secIdx]
+    // log("Checking duplicates for the following rows:")
+    // log(rowOne)
+    // log(rowTwo)
+    let similarityScore = detectSimilarity(rowOne, rowTwo, fieldAccThreshold, rowsToCompare)
+    if (similarityScore >= overallAccThreshold) {
+        sets.union(idx, secIdx)
+    }
 }
 
 /**
@@ -298,7 +309,24 @@ export function markIfDuplicates(data, idx, secIdx, fieldAccThreshold, rowsToCom
  */
 export function handleIteration(offset, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
+    // log("Entering handleIteration")
+    if (offset == 0)
+    {
+        handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+    }
+    else
+    {
+        let firstIndex = offset
+        let lastIndex = Math.min(offset + (windowSize - 1), data.length - 1)
+        // log('firstIndex is ' + firstIndex + ' and lastIndex is ' + lastIndex)
+        for (let idx = firstIndex; idx < lastIndex; ++idx)
+        {
+            // console.log("Handling a regular iteration")
+            // log('Checking for a duplicate between indices: ' + idx + " and " + lastIndex)
+            markIfDuplicates(data, idx, lastIndex, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets);
 
+        }
+    }
 
 }
 
@@ -320,6 +348,13 @@ export function handleIteration(offset, sets, windowSize, data, fieldAccThreshol
 export function handleFirstIteration(sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
 
+    for (let slowIndex = 0; slowIndex < windowSize; ++slowIndex)
+    {
+        for (let fastIndex = slowIndex + 1; fastIndex < windowSize; ++fastIndex)
+        {
+            markIfDuplicates(data, slowIndex, fastIndex, fieldAccThreshold, rowsToCompare, overallAccThreshold, sets)
+        }
+    }
 
 }
 
@@ -339,6 +374,14 @@ export function handleFirstIteration(sets, windowSize, data, fieldAccThreshold, 
  */
 export function identifyDistinctElements(data, windowSize, fieldAccThreshold, overallAccThreshold, rowsToCompare)
 {
+    let sets = new StaticDisjointSet(data.length)
+    let dataLength = data.length
+    for (let idx = 0; idx <= (dataLength - windowSize); ++idx)
+    {
+        handleIteration(idx, sets, windowSize, data, fieldAccThreshold, overallAccThreshold, rowsToCompare)
+    }
+
+    return sets.compile()
 
 
 }
